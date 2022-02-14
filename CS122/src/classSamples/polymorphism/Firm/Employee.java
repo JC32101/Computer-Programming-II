@@ -7,6 +7,7 @@ package classSamples.polymorphism.Firm;//***************************************
 public class Employee extends StaffMember {
 	protected String socialSecurityNumber;
 	protected double payRate;
+	final int vacationdays = 9;
 
 	// -----------------------------------------------------------------
 	// Constructor: Sets up this employee with the specified
@@ -18,6 +19,10 @@ public class Employee extends StaffMember {
 		socialSecurityNumber = socSecNumber;
 		payRate = rate;
 	}
+	
+	public int vacationdays() {
+		return vacationdays;
+	}
 
 	// -----------------------------------------------------------------
 	// Returns information about an employee as a string.
@@ -25,7 +30,7 @@ public class Employee extends StaffMember {
 	public String toString() {
 		String result = super.toString();
 
-		result += "\nSocial Security Number: " + socialSecurityNumber;
+		result += "\nSocial Security Number: " + socialSecurityNumber + "\nVacation Days: " + vacationdays();
 
 		return result;
 	}

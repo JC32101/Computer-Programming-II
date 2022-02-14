@@ -16,6 +16,10 @@ public class Executive extends Employee {
 
 		bonus = 0; // bonus has yet to be awarded
 	}
+	
+	public int vacationdays() {
+		return 28;
+	}
 
 	// -----------------------------------------------------------------
 	// Awards the specified bonus to this executive.

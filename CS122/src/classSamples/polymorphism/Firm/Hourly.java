@@ -16,6 +16,10 @@ public class Hourly extends Employee {
 
 		hoursWorked = 0;
 	}
+	
+	public int vacationdays() {
+		return 0;
+	}
 
 	// -----------------------------------------------------------------
 	// Adds the specified number of hours to this employee's
@@ -42,7 +46,7 @@ public class Hourly extends Employee {
 	public String toString() {
 		String result = super.toString();
 
-		result += "\nCurrent hours: " + hoursWorked;
+		result += "\nCurrent hours: " + hoursWorked + "\nVacation Days: " + vacationdays();
 
 		return result;
 	}

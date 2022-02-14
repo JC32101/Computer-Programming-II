@@ -12,6 +12,10 @@ public class Volunteer extends StaffMember {
 	public Volunteer(String eName, String eAddress, String ePhone) {
 		super(eName, eAddress, ePhone);
 	}
+	
+	public int vacationdays() {
+		return 0;
+	}
 
 	// -----------------------------------------------------------------
 	// Returns a zero pay value for this volunteer.

@@ -27,6 +27,7 @@ abstract public class StaffMember {
 
 		result += "Address: " + address + "\n";
 		result += "Phone: " + phone;
+		result += "\nVacation Days: " + vacationdays();
 
 		return result;
 	}
@@ -36,4 +37,5 @@ abstract public class StaffMember {
 	// employee.
 	// -----------------------------------------------------------------
 	public abstract double pay();
+	public abstract int vacationdays();
 }
