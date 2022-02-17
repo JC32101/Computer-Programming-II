@@ -1,6 +1,6 @@
 package assignments.assignment1;
 
-public abstract class Account {
+public class Account {
 	private int id;
 	private double balance;
 	private double annualInterestRate;
