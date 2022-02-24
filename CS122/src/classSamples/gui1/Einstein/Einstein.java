@@ -27,12 +27,14 @@ public class Einstein extends Application {
 		rect.setStroke(Color.PURPLE);
 		rect.setStrokeWidth(2);
 		rect.setFill(null);
+		rect.setRotate(45);
 
 		Ellipse ellipse = new Ellipse(200, 100, 150, 50);
 		ellipse.setFill(Color.BEIGE);
 
 		Text quote = new Text(120, 100, "Out of clutter, find " + "simplicity.\n-- Albert Einstein");
-
+		quote.setTranslateX(7);
+		
 		Group root = new Group(ellipse, rect, circle, line, quote);
 		Scene scene = new Scene(root, 400, 200);
 
