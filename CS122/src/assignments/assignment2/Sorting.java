@@ -10,18 +10,18 @@ public class Sorting<T> {
 // sort algorithm.
 // -----------------------------------------------------------------
 public void selectionSort(Comparable<T>[] list) {
-	int min;
+	int max;
 	Comparable<T> temp;
-
-	for (int index = 0; index < list.length - 1; index++) {
-		min = index;
-		for (int scan = index + 1; scan < list.length; scan++)
-			if (list[scan].compareTo((T) list[min]) < 0)
-				min = scan;
+	
+	for (int index = list.length-1; index > -1; index--) {
+		max = index;
+		for (int scan = index - 1; scan > -1; scan--)
+			if (list[scan].compareTo((T)list[max]) < 0)
+				max = scan;
 
 		// Swap the values
-		temp = list[min];
-		list[min] = list[index];
+		temp = list[max];
+		list[max] = list[index];
 		list[index] = temp;
 	}
 }
@@ -32,17 +32,17 @@ public void selectionSort(Comparable<T>[] list) {
 // -----------------------------------------------------------------
 public void insertionSort(Comparable<T>[] list) {
 	for (int index = 1; index < list.length; index++) {
-		Comparable<T> key = list[index];
-		int position = index;
+        Comparable<T> key = list[index];
+        int position = index;
 
-		// Shift larger values to the right
-		while (position > 0 && key.compareTo((T) list[position - 1]) < 0) {
-			list[position] = list[position - 1];
-			position--;
-		}
+        // Shift smaller values to the right
+        while (position > 0 && key.compareTo((T) list[position - 1]) > 0) {
+            list[position] = list[position - 1];
+            position--;
+        }
 
-		list[position] = key;
-	}
+        list[position] = key;
+    }
 }
 }
 
