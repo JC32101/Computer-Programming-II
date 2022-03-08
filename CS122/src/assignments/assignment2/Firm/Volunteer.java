@@ -4,7 +4,7 @@ package assignments.assignment2.Firm;//*****************************************
 //  Represents a staff member that works as a volunteer.
 //********************************************************************
 
-public class Volunteer extends StaffMember {
+public class Volunteer extends StaffMember implements Payable{
 	// -----------------------------------------------------------------
 	// Constructor: Sets up this volunteer using the specified
 	// information.
@@ -13,6 +13,7 @@ public class Volunteer extends StaffMember {
 		super(eName, eAddress, ePhone);
 	}
 	
+	@Override
 	public int vacationdays() {
 		return 0;
 	}
@@ -20,6 +21,7 @@ public class Volunteer extends StaffMember {
 	// -----------------------------------------------------------------
 	// Returns a zero pay value for this volunteer.
 	// -----------------------------------------------------------------
+	@Override
 	public double pay() {
 		return 0.0;
 	}

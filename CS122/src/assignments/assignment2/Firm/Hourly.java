@@ -4,7 +4,7 @@ package assignments.assignment2.Firm;//*****************************************
 //  Represents an employee that gets paid by the hour.
 //********************************************************************
 
-public class Hourly extends Employee {
+public class Hourly extends Employee implements Payable{
 	private int hoursWorked;
 
 	// -----------------------------------------------------------------
@@ -17,8 +17,9 @@ public class Hourly extends Employee {
 		hoursWorked = 0;
 	}
 	
+	@Override
 	public int vacationdays() {
-		return 0;
+		return super.vacationdays();
 	}
 
 	// -----------------------------------------------------------------
@@ -32,6 +33,7 @@ public class Hourly extends Employee {
 	// -----------------------------------------------------------------
 	// Computes and returns the pay for this hourly employee.
 	// -----------------------------------------------------------------
+	@Override
 	public double pay() {
 		double payment = payRate * hoursWorked;
 
@@ -46,7 +48,7 @@ public class Hourly extends Employee {
 	public String toString() {
 		String result = super.toString();
 
-		result += "\nCurrent hours: " + hoursWorked + "\nVacation Days: " + vacationdays();
+		result += "\nCurrent hours: " + hoursWorked;
 
 		return result;
 	}

@@ -5,9 +5,6 @@ package assignments.assignment2.Firm;//*****************************************
 //********************************************************************
 
 public class Firm{
-	
-	interface Payable{
-	}
 	// -----------------------------------------------------------------
 	// Creates a staff of employees for a firm and pays them.
 	// -----------------------------------------------------------------
@@ -15,5 +12,6 @@ public class Firm{
 		Staff personnel = new Staff();
 
 		personnel.payday();
+		personnel.vacationDays();
 	}
 }

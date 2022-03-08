@@ -4,10 +4,9 @@ package assignments.assignment2.Firm;//*****************************************
 //  Represents a general paid employee.
 //********************************************************************
 
-public class Employee extends StaffMember {
+public class Employee extends StaffMember implements Payable{
 	protected String socialSecurityNumber;
 	protected double payRate;
-	private int vacationdays;
 
 	// -----------------------------------------------------------------
 	// Constructor: Sets up this employee with the specified
@@ -18,15 +17,6 @@ public class Employee extends StaffMember {
 
 		socialSecurityNumber = socSecNumber;
 		payRate = rate;
-		vacationdays = 14;
-	}
-	
-	public void setVacationdays(int days) {
-		vacationdays = days;
-	}
-	
-	public int vacationdays() {
-		return vacationdays;
 	}
 
 	// -----------------------------------------------------------------
@@ -35,7 +25,7 @@ public class Employee extends StaffMember {
 	public String toString() {
 		String result = super.toString();
 
-		result += "\nSocial Security Number: " + socialSecurityNumber + "\nVacation Days: " + vacationdays();
+		result += "\nSocial Security Number: " + socialSecurityNumber;
 
 		return result;
 	}
@@ -43,7 +33,14 @@ public class Employee extends StaffMember {
 	// -----------------------------------------------------------------
 	// Returns the pay rate for this employee.
 	// -----------------------------------------------------------------
+	@Override
 	public double pay() {
 		return payRate;
+	}
+
+	@Override
+	public int vacationdays() {
+		// TODO Auto-generated method stub
+		return 14;
 	}
 }

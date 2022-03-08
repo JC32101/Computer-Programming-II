@@ -4,7 +4,7 @@ package assignments.assignment2.Firm;//*****************************************
 //  Represents a generic staff member.
 //********************************************************************
 
-abstract public class StaffMember {
+abstract public class StaffMember implements Payable{
 	protected String name;
 	protected String address;
 	protected String phone;
@@ -27,8 +27,7 @@ abstract public class StaffMember {
 
 		result += "Address: " + address + "\n";
 		result += "Phone: " + phone;
-		result += "\nVacation Days: " + vacationdays();
-
+		
 		return result;
 	}
 

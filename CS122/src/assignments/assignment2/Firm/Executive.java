@@ -4,7 +4,7 @@ package assignments.assignment2.Firm;//*****************************************
 //  Represents an executive staff member, who can earn a bonus.
 //********************************************************************
 
-public class Executive extends Employee {
+public class Executive extends Employee implements Payable{
 	private double bonus;
 
 	// -----------------------------------------------------------------
@@ -17,10 +17,6 @@ public class Executive extends Employee {
 		bonus = 0; // bonus has yet to be awarded
 	}
 	
-	public int vacationdays() {
-		return 28;
-	}
-
 	// -----------------------------------------------------------------
 	// Awards the specified bonus to this executive.
 	// -----------------------------------------------------------------
@@ -32,11 +28,17 @@ public class Executive extends Employee {
 	// Computes and returns the pay for an executive, which is the
 	// regular employee payment plus a one-time bonus.
 	// -----------------------------------------------------------------
+	@Override
 	public double pay() {
 		double payment = super.pay() + bonus;
 
 		bonus = 0;
 
 		return payment;
+	}
+	
+	@Override
+	public int vacationDays() {
+		return super.vacationdays();
 	}
 }

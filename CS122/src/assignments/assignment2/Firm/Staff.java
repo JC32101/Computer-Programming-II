@@ -4,7 +4,7 @@ package assignments.assignment2.Firm;//*****************************************
 //  Represents the personnel staff of a particular business.
 //********************************************************************
 
-public class Staff {
+public class Staff implements Payable{
 	private final StaffMember[] staffList;
 
 	// -----------------------------------------------------------------
@@ -46,5 +46,21 @@ public class Staff {
 
 			System.out.println("-----------------------------------");
 		}
+	}
+
+	public void vacationDays() {
+		for (int i = 0; i < staffList.length; i++) {
+			System.out.println(staffList[i]);
+
+			System.out.println("Vacation Days: " + staffList[i].vacationdays());
+
+			System.out.println("-----------------------------------");
+		}
+	}
+
+	@Override
+	public double pay() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }
