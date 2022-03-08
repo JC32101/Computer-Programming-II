@@ -38,7 +38,7 @@ public class SortingDriver {
 		//sorting by insertion
 		s.insertionSort(list2);
 		//prints the list after insertion sort
-		System.out.print("Selection Sort: ");
+		System.out.print("Insertion Sort: ");
 		for(int i = 0; i < size; i++) {
 			System.out.print(list2[i] + " ");
 		}
