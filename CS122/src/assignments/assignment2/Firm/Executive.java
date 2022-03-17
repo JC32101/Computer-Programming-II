@@ -37,7 +37,6 @@ public class Executive extends Employee implements Payable{
 		return payment;
 	}
 	
-	@Override
 	public int vacationDays() {
 		return super.vacationdays();
 	}
