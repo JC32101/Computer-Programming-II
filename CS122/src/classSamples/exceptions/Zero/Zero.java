@@ -5,11 +5,13 @@ package classSamples.exceptions.Zero;
 //  Demonstrates an uncaught exception.
 //********************************************************************
 
+import java.io.FileNotFoundException;
+
 public class Zero {
 	// -----------------------------------------------------------------
 	// Deliberately divides by zero to produce an exception.
 	// -----------------------------------------------------------------
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException{
 		int numerator = 10;
 		int denominator = 0;
 
