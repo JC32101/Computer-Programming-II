@@ -46,9 +46,9 @@ public class FontDemo extends Application {
 		
 		Button button = new Button("Change Font");
 		button.setOnAction(value ->{
-			Font f = randomizeFont(fonts);
-			int textIDX = randomizeNum(3);
-			texts[textIDX].setFont(f);
+			int fontIDX = randomizeNum(fonts.length);
+			int textIDX = randomizeNum(fonts.length);
+			texts[textIDX].setFont(fonts[fontIDX]);
 		});
 
 		Group root = new Group(button, text1, text2, text3);
@@ -57,12 +57,6 @@ public class FontDemo extends Application {
 		primaryStage.setTitle("Font Demo");
 		primaryStage.setScene(scene);
 		primaryStage.show();
-	}
-	
-	public Font randomizeFont(Font[] fonts) {
-		Random rand = new Random();
-		int idx = rand.nextInt(3);
-		return fonts[idx];
 	}
 	
 	public int randomizeNum(int num) {
