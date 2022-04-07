@@ -1,7 +1,6 @@
-package classSamples.gui3.FontDemo;
+package classlab.week12;
 
 import java.util.Random;
-
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -19,7 +18,7 @@ import javafx.stage.Stage;
 //  Demonstrates the creation and use of fonts.
 //************************************************************************
 
-public class FontDemo extends Application {
+public class Font extends Application {
 	// --------------------------------------------------------------------
 	// Displays three Text objects using various font styles.
 	// --------------------------------------------------------------------
@@ -51,7 +50,7 @@ public class FontDemo extends Application {
 			texts[textIDX].setFont(f);
 		});
 
-		Group root = new Group(button, text1, text2, text3);
+		Group root = new Group(text1, text2, text3);
 		Scene scene = new Scene(root, 400, 200, Color.LIGHTCYAN);
 
 		primaryStage.setTitle("Font Demo");
