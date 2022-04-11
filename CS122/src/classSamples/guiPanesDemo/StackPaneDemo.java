@@ -1,4 +1,4 @@
-package classSamples.guipanes_demo;
+package classSamples.guiPanesDemo;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

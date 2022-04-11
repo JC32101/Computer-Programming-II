@@ -1,4 +1,4 @@
-package classSamples.recursions.KochSnowflake;
+package classSamples.recursion.KochSnowflake;
 
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Line;

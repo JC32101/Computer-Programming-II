@@ -1,4 +1,4 @@
-package classSamples.recursions.TiledImages;
+package classSamples.recursion.TiledImages;
 
 import javafx.application.Application;
 import javafx.scene.Group;

@@ -1,4 +1,4 @@
-package classSamples.recursions.SolveTowers;//********************************************************************
+package classSamples.recursion.SolveTowers;//********************************************************************
 //  TowersOfHanoi.java       Author: Lewis/Loftus
 //
 //  Represents the classic Towers of Hanoi puzzle.

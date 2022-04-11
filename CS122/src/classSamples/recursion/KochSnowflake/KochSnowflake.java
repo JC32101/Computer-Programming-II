@@ -1,4 +1,4 @@
-package classSamples.recursions.KochSnowflake;
+package classSamples.recursion.KochSnowflake;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;

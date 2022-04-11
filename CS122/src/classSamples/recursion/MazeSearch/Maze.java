@@ -1,4 +1,4 @@
-package classSamples.recursions.MazeSearch;//********************************************************************
+package classSamples.recursion.MazeSearch;//********************************************************************
 //  Maze.java       Author: Lewis/Loftus
 //
 //  Represents a maze of characters. The goal is to get from the
