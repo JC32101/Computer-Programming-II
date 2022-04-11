@@ -18,6 +18,7 @@ import javafx.stage.Stage;
 //  Demonstrates the creation and use of fonts.
 //************************************************************************
 
+public class Font extends Application {
 	// --------------------------------------------------------------------
 	// Displays three Text objects using various font styles.
 	// --------------------------------------------------------------------
@@ -44,9 +45,7 @@ import javafx.stage.Stage;
 		
 		Button button = new Button("Change Font");
 		button.setOnAction(value ->{
-			Font f = randomizeFont(fonts);
-			int textIDX = randomizeNum(3);
-			texts[textIDX].setFont(f);
+			texts[randomizeNum(3)].setFont(randomizeFont(fonts));
 		});
 
 		Group root = new Group(text1, text2, text3);
