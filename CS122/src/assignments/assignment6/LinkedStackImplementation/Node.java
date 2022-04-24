@@ -1,4 +1,4 @@
-package assignments.assignment6;
+package assignments.assignment6.LinkedStackImplementation;
 
 //***********************************************************
 //Node.java

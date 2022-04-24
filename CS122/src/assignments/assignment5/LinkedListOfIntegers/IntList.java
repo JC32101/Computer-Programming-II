@@ -1,4 +1,4 @@
-package assignments.assignment5;
+package assignments.assignment5.LinkedListOfIntegers;
 
 //***************************************************************
 //FILE: IntList.java
@@ -21,7 +21,7 @@ public class IntList {
 		IntNode temp = front;
 		int count = 0;
 		
-		while(temp.next != null) {
+		while(temp != null) {
 			count++;
 			temp = temp.next;
 		}
@@ -30,13 +30,14 @@ public class IntList {
 	}
 	
 	public String toString() {
+		String val = "-----------------------\nList elements: ";
 		IntNode temp = front;
-		String val = "" + temp.val;
 		
-		while(temp.next != null) {
+		while (temp != null) {
+			val = val + temp.val + " ";
 			temp = temp.next;
-			val = " " + temp.val;
 		}
+		val = val + "\n-----------------------\n";
 		
 		return val;
 	}
@@ -55,7 +56,7 @@ public class IntList {
 		if(front != null) {
 			IntNode temp = front;
 			
-			while(temp.next != null) {
+			while(temp != null) {
 				if(temp.val == oldVal)
 					temp.val = newVal;
 				temp = temp.next;
@@ -101,7 +102,7 @@ public class IntList {
 	// Prints the list elements from first to last.
 	// ------------------------------------------------
 	public void print() {
-		System.out.println("--------------------");
+		System.out.println("-----------------------");
 		System.out.print("List elements: ");
 		IntNode temp = front;
 		while (temp != null) {

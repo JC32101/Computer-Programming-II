@@ -1,4 +1,4 @@
-package assignments.assignment5;
+package assignments.assignment5.LinkedListOfIntegers;
 
 //************************************************************
 //Node.java

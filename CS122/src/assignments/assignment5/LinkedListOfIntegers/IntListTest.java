@@ -1,4 +1,4 @@
-package assignments.assignment5;
+package assignments.assignment5.LinkedListOfIntegers;
 
 //***************************************************************
 //IntListTest.java
@@ -31,7 +31,8 @@ public class IntListTest {
 	// Does what the menu item calls for.
 	// ----------------------------------------
 	public static void dispatch(int choice) {
-		int newVal;
+		int newVal, oldVal;
+		
 		switch (choice) {
 		case 0:
 			System.out.println("Bye!");
@@ -52,6 +53,22 @@ public class IntListTest {
 		case 4: // print
 			list.print();
 			break;
+		case 5: // print list as String
+			System.out.println(list.toString());
+			break;
+		case 6: // print size of list
+			System.out.println(list.length());
+			break;
+		case 7: // remove last element
+			list.removeLast();
+			break;
+		case 8: // replace all old values with new values
+			System.out.println("Enter integer to replace");
+			oldVal = scan.nextInt();
+			System.out.println("Enter new integer to replace the old value with");
+			newVal = scan.nextInt();
+			list.replace(oldVal, newVal);
+			break;
 		default:
 			System.out.println("Sorry, invalid choice");
 		}
@@ -68,6 +85,10 @@ public class IntListTest {
 		System.out.println("2: Add an integer to the end of the list");
 		System.out.println("3: Remove an integer from the front of the list");
 		System.out.println("4: Print the list");
+		System.out.println("5: Print the list as a String");
+		System.out.println("6: Print the size of list");
+		System.out.println("7: Remove an integer from the end of the list");
+		System.out.println("8: Replaces all old value with a new value of the list");
 		System.out.print("\nEnter your choice: ");
 	}
 }

@@ -1,12 +1,12 @@
-package assignments.assignment6;
+package assignments.assignment6.LinkedStackImplementation;
 
-// ***************************************************************
-// LinkedStack.java
+//***************************************************************
+//LinkedStack.java
 //
-// A linked implementation of an Object stack class with operations push,
-// pop, and isEmpty and isFull.
+//A linked implementation of an Object stack class with operations push,
+//pop, and isEmpty and isFull.
 //
-// ***************************************************************
+//***************************************************************
 
 public class LinkedStack implements StackADT {
 	private Node top; // reference to top of stack
@@ -22,6 +22,15 @@ public class LinkedStack implements StackADT {
 	//does nothing.
 	//---------------------------------------------------
 	public void push(Object val) {
+		if(isEmpty()) {
+			top = new Node(val);
+		}
+		else {
+			Node newNode = new Node(val);
+			Node temp = top;
+			newNode.setNext(temp);
+			top = newNode;
+		}
 	}
 
 	//---------------------------------------------------
@@ -29,17 +38,32 @@ public class LinkedStack implements StackADT {
 	//is empty returns null.
 	//---------------------------------------------------
 	public Object pop() {
+		if(isEmpty()) {
+			return null;
+		}
+		else {
+			Object val = top.getElement();
+			top = top.getNext();
+			return val;
+		}
 	}
 
 	//---------------------------------------------------
 	//Returns true if stack is empty, false otherwise.
 	//---------------------------------------------------
 	public boolean isEmpty() {
+		if(top == null) {
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 	//---------------------------------------------------
 	//Returns true if stack is full, false otherwise.
 	//---------------------------------------------------
 	public boolean isFull() {
+		return false;
 	}
 }
