@@ -1,4 +1,4 @@
-package assignments.assignment5.LinkedListOfIntegers;
+package assignments.assignment5.LinkedQueueImplementation;
 
 //************************************************************
 //Node.java

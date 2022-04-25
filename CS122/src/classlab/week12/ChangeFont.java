@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 //  Demonstrates the creation and use of fonts.
 //************************************************************************
 
-public class Font extends Application {
+public class ChangeFont extends Application {
 	// --------------------------------------------------------------------
 	// Displays three Text objects using various font styles.
 	// --------------------------------------------------------------------

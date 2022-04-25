@@ -1,7 +1,5 @@
 package assignments.assignment5.LinkedQueueImplementation;
 
-import assignments.assignment5.LinkedListOfIntegers.Node;
-
 //***********************************************************
 //LinkedQueue.java
 //A linked-list implementation of the classic FIFO queue interface.
