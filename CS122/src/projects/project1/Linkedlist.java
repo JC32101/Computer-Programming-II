@@ -24,7 +24,7 @@ public class Linkedlist<T> {
 	}
 	
 	public void remove() {
-		if(front.getNext() == null || front == null)
+		if(front == null || front.getNext() == null)
 			front = null;
 		else
 			front = front.getNext();
@@ -34,7 +34,7 @@ public class Linkedlist<T> {
 		front = null;
 	}
 	
-	public String toString() {
+	public String print() {
 		if(front == null)
 			return "null";
 		else {
@@ -43,6 +43,7 @@ public class Linkedlist<T> {
 			
 			while(temp != null) {
 				str = str + temp.getValue() + " -> ";
+				temp = temp.getNext();
 			}
 			
 			str+= "null";

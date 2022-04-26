@@ -9,25 +9,25 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.TextInputDialog;
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
-import javafx.scene.text.FontPosture;
-import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class LinkedlistFX extends Application {
-	public void start(Stage primaryStage) {
+	private Linkedlist list;
+	private String str = "";
+	
+	public void start(Stage primaryStage) {	
+		list = new Linkedlist();	
 		
-		Linkedlist list = new Linkedlist();
-		
-		Text text = new Text();
-		text.setText(list.toString());
+		Text text = new Text("");
+		text.setText("null");
 		text.setLayoutX(100.0);
 		text.setLayoutY(100.0);
 		
 		Button addBTN = new Button("ADD");
 		addBTN.setOnAction(value ->{
 			inputText(list);
-			text.setText(list.toString());
+			text.setText(str);
 		});
 		addBTN.setLayoutX(100.0);
 		addBTN.setLayoutY(10.0);
@@ -35,7 +35,8 @@ public class LinkedlistFX extends Application {
 		Button removeBTN = new Button("REMOVE");
 		removeBTN.setOnAction(value ->{
 			list.remove();
-			text.setText(list.toString());
+			str = list.print();
+			text.setText(str);
 		});
 		removeBTN.setLayoutX(250.0);
 		removeBTN.setLayoutY(10.0);
@@ -43,7 +44,8 @@ public class LinkedlistFX extends Application {
 		Button clearBTN = new Button("CLEAR");
 		clearBTN.setOnAction(value ->{
 			list.clear();
-			text.setText(list.toString());
+			str = list.print();
+			text.setText(str);
 		});
 		clearBTN.setLayoutX(400.0);
 		clearBTN.setLayoutY(10.0);
@@ -56,7 +58,7 @@ public class LinkedlistFX extends Application {
 		primaryStage.show();
 	}
 
-	private Linkedlist inputText(Linkedlist list) {
+	private void inputText(Linkedlist list) {
 		TextInputDialog textInput = new TextInputDialog();
 		textInput.setTitle("ADD");
 		textInput.getDialogPane().setContentText("Enter String or Integer: ");
@@ -64,12 +66,9 @@ public class LinkedlistFX extends Application {
 		Optional<String> result = textInput.showAndWait();
 		TextField input = textInput.getEditor();
 		
-		if(input.getText() != null) {
+		if(input.getText() != null)
 			list.add(input);
-			return list;
-		}
-		else
-			return list;
+		str = list.print();
 	}
 
 	public static void main(String[] args) {
