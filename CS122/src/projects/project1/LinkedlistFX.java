@@ -67,7 +67,7 @@ public class LinkedlistFX extends Application {
 		TextField input = textInput.getEditor();
 		
 		if(input.getText() != null)
-			list.add(input);
+			list.add(input.getText());
 		str = list.print();
 	}
 

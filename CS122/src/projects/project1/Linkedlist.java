@@ -13,13 +13,14 @@ public class Linkedlist<T> {
 		else if(front == null)
 			front = new Node(value);
 		else {
+			Node node = new Node(value);
 			Node temp = front;
 			
-			while(temp != null) {
+			while(temp.getNext() != null) {
 				temp = temp.getNext();
 			}
 			
-			temp = new Node(value);
+			temp.setNext(node);
 		}
 	}
 	
